@@ -9,15 +9,14 @@ This test is the 8th project of the Google Developer Scholarship Front End Devel
 * [Contributing](#contributing)
 
 ## Overview
-In the MyReads project, I had to create a bookshelf app. In the app you can select and categorize books you have read, are currently reading, or want to read. The project emphasizes using React to build the application and provides an API server and client library that you will use to persist information as you interact with the application.
+In the Neighborhood Map (React) project, I had to create map with at least 5 locations. In the app you can select markers from the map or from the listview and you can see additional information about the locations. You can use filter to narrow the list of the markers.
 
 ## How to run this app
 - To install the application clone this git repository
-- Go into the application folder: `$ cd myreads`
+- Go into the application folder: `$ cd neighborhood map`
 - Install dependencies using `npm` command line tool: `$ npm install`
 - Run the application, again using `npm`: `$ npm start`
 - The goal of the app is to categorize your books. You can search and add books to one of your 3 shelf (currently reading, want to read, read) and you can remove them.
-- The search term are limited => see SEARCH_TERMS.md
 
 ## Used technologies
 - HTML5
@@ -25,7 +24,7 @@ In the MyReads project, I had to create a bookshelf app. In the app you can sele
 - core Javascript
 - React JS
 - JSX
-- https://fonts.googleapis.com
+- https://fontawesome.com
 - https://vignette.wikia.nocookie.net/bakemonogatari1645/images/2/26/No-cover-placeholder.png
 - https://reactnd-books-api.udacity.com
 
