@@ -1,0 +1,113 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: rgb(4, 48, 54);
+  height: 40px;
+  padding-top: 5px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App, #root, #map {
+        height: 100%;
+      }
+
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+h1 {
+  display: inline;
+  font-size: 30px;
+  transition: all 1s ease;
+}
+
+i {
+  position: absolute;
+  left: 20px;
+  top: 8px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.sidebar {
+  padding: 15px 0;
+  position: fixed;
+  display: block;
+  top: 120px;
+  left: 0;
+  width: 250px;
+  background-color: rgb(1, 60, 65);
+  opacity: 0.85;
+  color: white;
+  z-index: 1;
+  border-radius: 0 20px 20px 0;
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+}
+
+.sidebar-out {
+  left: -400px;
+}
+
+.sidebar ul {
+  padding: 15px 0;
+  margin: 0;
+}
+
+.listItem {
+  font-size: 1rem;
+  text-align: left;
+  margin: 0;
+  cursor: pointer;
+  padding: 4%;
+  list-style-type: none;
+  background-color: rgb(6, 88, 99)
+}
+
+.listItem:hover, .listItem:active {
+  background-color: rgb(151, 4, 41)
+}
+
+input {
+  padding: 0 10px;
+  width: 200px;
+}
+
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 27px;
+    padding-right: 20px;
+    transition: all 0.5s ease;
+    
+  }
+
+  .App {
+    text-align: right;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-radius: 0;
+    text-align: center;
+
+  }
+}
+
