@@ -126,7 +126,7 @@ class App extends Component {
       fetch(search)
         .then(resp => resp.json())
         .then(data => {
-          console.log(data.query.pages[0])
+          
           if (!data.query.pages[0].thumbnail) {
             id.thumb = "https://www.freeiconspng.com/uploads/no-image-icon-15.png"
           }
