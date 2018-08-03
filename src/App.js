@@ -92,8 +92,8 @@ class App extends Component {
 
           this.state.map.setCenter(item.position)
           this.state.infowindows.open(this.state.map, item)
-          this.state.infowindows.setContent(`<h2>${this.state.wiki[index].title}</h2><img width="250px" src="${this.state.wiki[index].thumb}" alt="${this.state.wiki[index].title}"</img><p><b>${this.state.wiki[index].description}</b></p><p>Powered by Wikipedia</p>`)
-
+          this.state.infowindows.setContent(`<h2>${item.title}</h2><img width="250px" src="${this.state.wiki[index].thumb}" alt="${this.state.wiki[index].title}"</img><p><b>${this.state.wiki[index].description}</b></p><p>Powered by Wikipedia</p>`)
+          
           this.setState(prevState => ({
             clickedMarker: item
           }))
@@ -126,11 +126,26 @@ class App extends Component {
       fetch(search)
         .then(resp => resp.json())
         .then(data => {
-          id.thumb = data.query.pages[0].thumbnail.source
-          id.description = data.query.pages[0].description
+          console.log(data.query.pages[0])
+          if (!data.query.pages[0].thumbnail) {
+            id.thumb = "https://www.freeiconspng.com/uploads/no-image-icon-15.png"
+          }
+          else {
+            id.thumb = data.query.pages[0].thumbnail.source
+          }
+          if (data.query.pages[0].description) {
+            id.description = data.query.pages[0].description
+          }
+          else {
+            id.description = "No description available1"
+          }
+         
           id.title = data.query.pages[0].title
         })
-        .catch(error => alert('Error: Wikipedia is not responding'))
+        .catch(error => {
+          alert('Error: Wikipedia is not responding')
+          console.log(error)
+        })
     })
 
     this.setState(prevState => ({
