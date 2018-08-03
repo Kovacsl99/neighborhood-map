@@ -11,7 +11,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      center: { lat: 37.8182186, lng: -122.4840935 },
+      center: { lat: 37.774929, lng: -122.419416 },
       zoom: 12,
       map: '',
       wiki: wiki,
