@@ -21,13 +21,13 @@ const SideBar = props => {
                 item.setIcon('http://maps.google.com/mapfiles/ms/micons/blue-pushpin.png')
                 map.setCenter(item.position)
                 infowindows.open(map, item)
-                infowindows.setContent(`<h2>${item.title}</h2><img src="${wiki[index].thumb}"</img><p><b>${wiki[index].description}</b></p><p>Powered by Wikipedia</p>`)
+                infowindows.setContent(`<h2>${item.title}</h2><img src="${wiki[index].thumb}" alt="${wiki[index].title}"</img><p><b>${wiki[index].description}</b></p><p>Powered by Wikipedia</p>`)
             }
-
             else {
                 item.setAnimation(null)
                 item.setIcon('http://maps.google.com/mapfiles/ms/micons/red-pushpin.png')
             }
+            return null
         })
     }
 
@@ -40,6 +40,7 @@ const SideBar = props => {
             else {
                 item.setMap(map)
             }
+            return null
         })
         
         const menuItems = document.querySelectorAll('.listItem')
